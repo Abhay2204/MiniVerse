@@ -17,7 +17,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "73% Hydrogen, 25% Helium, 2% heavier elements",
     moons: 0,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/sun.jpg",
     facts: [
       "The Sun is 109 times wider than Earth",
       "It takes 8 minutes for sunlight to reach Earth",
@@ -40,7 +40,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron core (75% of radius), silicate mantle",
     moons: 0,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/mercury.jpg",
     facts: [
       "Mercury has no moons or rings",
       "Temperature ranges from -173°C to 427°C",
@@ -63,7 +63,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Similar to Earth - iron core, silicate mantle",
     moons: 0,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/venus.jpg",
     facts: [
       "Venus rotates backwards (retrograde rotation)",
       "Surface temperature is 462°C - hot enough to melt lead",
@@ -86,7 +86,7 @@ const solarSystemData = {
     discoveryYear: "N/A - Home planet",
     composition: "Iron-nickel core, silicate mantle, water oceans",
     moons: 1,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/earth.jpg",
     facts: [
       "71% of Earth's surface is covered by water",
       "Earth has one natural satellite: the Moon",
@@ -109,7 +109,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron sulfide core, basaltic mantle, iron oxide surface",
     moons: 2,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/mars.jpg",
     facts: [
       "Mars has two small moons: Phobos and Deimos",
       "Olympus Mons is the largest volcano in the solar system (21 km high)",
@@ -132,7 +132,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium with a rocky core",
     moons: 95,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/jupiter.jpg",
     facts: [
       "Jupiter has 95 known moons, including the four Galilean moons",
       "The Great Red Spot is a storm larger than Earth that has lasted 400+ years",
@@ -155,7 +155,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium, less dense than water",
     moons: 146,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/saturn.jpg",
     facts: [
       "Saturn has 146 confirmed moons, including Titan with lakes of methane",
       "Its rings are made of ice and rock particles, some as small as dust",
@@ -178,7 +178,7 @@ const solarSystemData = {
     discoveryYear: "1781 by William Herschel",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 27,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/uranus.jpg",
     facts: [
       "Uranus rotates on its side (98° axial tilt)",
       "It has 27 known moons named after Shakespeare characters",
@@ -201,7 +201,7 @@ const solarSystemData = {
     discoveryYear: "1846 by mathematical prediction",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 16,
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
+    image: "/src/images/neptune.jpg",
     facts: [
       "Wind speeds reach up to 2,100 km/h - faster than the speed of sound",
       "Neptune has 16 known moons, largest being Triton",
@@ -221,6 +221,7 @@ const historicComets = [
     nextVisible: "2061",
     description: "The most famous comet, visible to the naked eye every 75-76 years",
     color: "#87CEEB",
+    image: "/src/images/comets.jpg",
     facts: [
       "Named after astronomer Edmond Halley",
       "Mentioned in Chinese records from 240 BCE",
@@ -235,6 +236,7 @@ const historicComets = [
     nextVisible: "4530",
     description: "One of the brightest comets of the 20th century",
     color: "#FFD700",
+    image: "/src/images/comets.jpg",
     facts: [
       "Visible to naked eye for 18 months",
       "Nucleus is 30-40 km in diameter",
@@ -249,6 +251,7 @@ const historicComets = [
     nextVisible: "68,000 CE",
     description: "Known for its extremely long tail",
     color: "#98FB98",
+    image: "/src/images/comets.jpg",
     facts: [
       "Tail stretched over 100 degrees across the sky",
       "Discovered by amateur astronomer Yuji Hyakutake",
@@ -316,7 +319,7 @@ const EnhancedIntroScreen: React.FC = () => {
   const [showGames, setShowGames] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [speed, setSpeed] = useState(0.3);
-  const [cameraAngle, setCameraAngle] = useState(0);
+  const cameraAngleRef = useRef(0);
   const [zoomLevel, setZoomLevel] = useState(0.8);
   const [showComets, setShowComets] = useState(true);
   const [cameraX, setCameraX] = useState(0);
@@ -590,7 +593,7 @@ const EnhancedIntroScreen: React.FC = () => {
       Object.entries(planets.current).forEach(([name, planet]) => {
         planet.angle += planet.speed * speed;
       });
-      setCameraAngle(prev => prev + 0.0002 * speed);
+      cameraAngleRef.current += 0.0002 * speed;
     }
 
     // Draw orbital paths with enhanced styling
@@ -617,8 +620,8 @@ const EnhancedIntroScreen: React.FC = () => {
     // Draw planets
     Object.entries(planets.current).forEach(([name, planet]) => {
       const adjustedDistance = planet.distance * zoomLevel;
-      const x = centerX + Math.cos(planet.angle + cameraAngle) * adjustedDistance;
-      const y = centerY + Math.sin(planet.angle + cameraAngle) * adjustedDistance;
+      const x = centerX + Math.cos(planet.angle + cameraAngleRef.current) * adjustedDistance;
+      const y = centerY + Math.sin(planet.angle + cameraAngleRef.current) * adjustedDistance;
       const planetData = solarSystemData[name as keyof typeof solarSystemData];
       
       drawPlanet(ctx, x, y, planet.size * zoomLevel, planetData.color, name, name === 'saturn');
@@ -639,7 +642,7 @@ const EnhancedIntroScreen: React.FC = () => {
     }
 
     animationRef.current = requestAnimationFrame(animate);
-  }, [isPlaying, speed, cameraAngle, zoomLevel, showComets, drawSun, drawPlanet, drawEnhancedStarField, drawAsteroidBelt, drawComet]);
+  }, [isPlaying, speed, zoomLevel, showComets, drawSun, drawPlanet, drawEnhancedStarField, drawAsteroidBelt, drawComet]);
 
   useEffect(() => {
     animate();
@@ -671,8 +674,8 @@ const EnhancedIntroScreen: React.FC = () => {
     // Check if click is on any planet
     Object.entries(planets.current).forEach(([name, planet]) => {
       const adjustedDistance = planet.distance * zoomLevel;
-      const planetX = centerX + Math.cos(planet.angle + cameraAngle) * adjustedDistance;
-      const planetY = centerY + Math.sin(planet.angle + cameraAngle) * adjustedDistance;
+      const planetX = centerX + Math.cos(planet.angle + cameraAngleRef.current) * adjustedDistance;
+      const planetY = centerY + Math.sin(planet.angle + cameraAngleRef.current) * adjustedDistance;
       const distance = Math.sqrt((x - planetX) ** 2 + (y - planetY) ** 2);
       
       if (distance <= planet.size * zoomLevel + 15) {
@@ -817,7 +820,7 @@ const EnhancedIntroScreen: React.FC = () => {
               <button
                 onClick={() => {
                   Object.values(planets.current).forEach(planet => planet.angle = Math.random() * Math.PI * 2);
-                  setCameraAngle(0);
+                  cameraAngleRef.current = 0;
                   setCameraX(0);
                   setCameraY(0);
                   setSpeed(0.3);
@@ -1039,14 +1042,27 @@ const EnhancedIntroScreen: React.FC = () => {
 
                 {/* Comet Visual */}
                 <div
-                  className="w-full h-24 rounded-xl flex items-center justify-center text-4xl border-2 relative overflow-hidden"
+                  className="w-full h-48 rounded-xl flex items-center justify-center relative overflow-hidden border-2"
                   style={{
                     background: `radial-gradient(ellipse 80% 30% at 20% 50%, ${historicComets[selectedComet].color}60, transparent), radial-gradient(circle at 20% 50%, ${historicComets[selectedComet].color}40, transparent)`,
                     borderColor: `${historicComets[selectedComet].color}60`
                   }}
                 >
-                  <span>☄️</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+                  {historicComets[selectedComet].image ? (
+                    <img
+                      src={historicComets[selectedComet].image}
+                      alt={`${historicComets[selectedComet].name} comet`}
+                      className="w-full h-full object-cover rounded-xl"
+                      onError={(e) => {
+                        // Fallback to emoji if image fails to load
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl">☄️</span>';
+                      }}
+                    />
+                  ) : (
+                    <span className="text-4xl">☄️</span>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-xl"></div>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-4 border border-cyan-500/20">
@@ -1248,15 +1264,15 @@ const EnhancedIntroScreen: React.FC = () => {
 
           <div className="flex items-center space-x-6">
             <div className="text-center">
-              <div className="text-lg font-bold text-orange-400">9</div>
+              <div className="text-lg font-bold text-orange-400">8</div>
               <div className="text-xs text-gray-400">Planets</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-blue-400">3</div>
+              <div className="text-lg font-bold text-blue-400">Thousands+</div>
               <div className="text-xs text-gray-400">Comets</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-green-400">80</div>
+              <div className="text-lg font-bold text-green-400">~1,000,000+</div>
               <div className="text-xs text-gray-400">Asteroids</div>
             </div>
             <div className="text-center">
