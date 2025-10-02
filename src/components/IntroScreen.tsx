@@ -749,17 +749,17 @@ const EnhancedIntroScreen: React.FC = () => {
       className="fixed inset-0 z-50 bg-black flex flex-col"
     >
       {/* Enhanced Header */}
-      <div className="relative z-10 bg-gradient-to-r from-black/80 via-purple-900/30 to-black/80 backdrop-blur-sm border-b border-purple-500/30 p-4">
-        <div className="flex items-center justify-between max-w-7xl mx-auto">
+      <div className="relative z-10 bg-gradient-to-r from-black/80 via-purple-900/30 to-black/80 backdrop-blur-sm border-b border-purple-500/30 p-2 sm:p-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto gap-2 sm:gap-0">
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className="flex items-center space-x-6"
+            className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 w-full sm:w-auto"
           >
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
-              🌌 MiniVerse Galaxy Explorer
+            <h1 className="text-lg sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent text-center sm:text-left">
+              🌌 MiniVerse Galaxy
             </h1>
-            <div className="flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Star className="w-4 h-4 text-yellow-400" />
                 <span>Interactive Universe</span>
@@ -771,7 +771,7 @@ const EnhancedIntroScreen: React.FC = () => {
             </div>
           </motion.div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 w-full sm:w-auto justify-center sm:justify-end">
             {/* Enhanced Controls */}
             <div className="flex items-center space-x-3 bg-black/40 rounded-xl p-3 border border-purple-500/20">
               <button
@@ -899,11 +899,7 @@ const EnhancedIntroScreen: React.FC = () => {
                       src={(solarSystemData[selectedPlanet as keyof typeof solarSystemData] as any).image}
                       alt={`${solarSystemData[selectedPlanet as keyof typeof solarSystemData].name} planet`}
                       className="w-full h-full object-cover rounded-xl"
-                      onError={(e) => {
-                        // Fallback to emoji if image fails to load
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<span class="text-6xl">🪐</span>';
-                      }}
+
                     />
                   ) : (
                     <span className="text-6xl">🪐</span>
@@ -1053,11 +1049,7 @@ const EnhancedIntroScreen: React.FC = () => {
                       src={historicComets[selectedComet].image}
                       alt={`${historicComets[selectedComet].name} comet`}
                       className="w-full h-full object-cover rounded-xl"
-                      onError={(e) => {
-                        // Fallback to emoji if image fails to load
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl">☄️</span>';
-                      }}
+
                     />
                   ) : (
                     <span className="text-4xl">☄️</span>
@@ -1220,13 +1212,13 @@ const EnhancedIntroScreen: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute bottom-6 left-6 bg-black/80 backdrop-blur-lg rounded-xl p-4 max-w-md border border-purple-500/30"
+            className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-auto bg-black/80 backdrop-blur-lg rounded-xl p-3 sm:p-4 max-w-md border border-purple-500/30"
           >
-            <div className="flex items-center space-x-2 mb-3">
-              <Info className="w-5 h-5 text-purple-400" />
-              <h3 className="font-semibold text-purple-300">🌟 Galactic Explorer Guide</h3>
+            <div className="flex items-center space-x-2 mb-2 sm:mb-3">
+              <Info className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
+              <h3 className="font-semibold text-sm sm:text-base text-purple-300">🌟 Galactic Explorer Guide</h3>
             </div>
-            <ul className="text-sm text-gray-300 space-y-2">
+            <ul className="text-xs sm:text-sm text-gray-300 space-y-1 sm:space-y-2">
               <li className="flex items-center space-x-2">
                 <span className="text-blue-400">🪐</span>
                 <span>Click planets to discover amazing facts</span>
@@ -1239,7 +1231,7 @@ const EnhancedIntroScreen: React.FC = () => {
                 <span className="text-green-400">🎮</span>
                 <span>Explore 15+ games across 5 categories</span>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="hidden sm:flex items-center space-x-2">
                 <span className="text-purple-400">⚙️</span>
                 <span>Use controls to customize speed, zoom, and comets</span>
               </li>
