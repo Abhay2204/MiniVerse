@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { name: 'Game Worlds', href: '#games', icon: Rocket },
-    { name: 'Developer Zone', href: '#developer', icon: User },
+    { name: 'Developer Zone', href: '#section4', icon: User },
     { name: 'Leaderboard', href: '#leaderboard', icon: Trophy },
     { name: 'About', href: '#about', icon: User },
   ];
