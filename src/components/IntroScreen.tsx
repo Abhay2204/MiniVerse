@@ -17,7 +17,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "73% Hydrogen, 25% Helium, 2% heavier elements",
     moons: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/512px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "The Sun is 109 times wider than Earth",
       "It takes 8 minutes for sunlight to reach Earth",
@@ -40,7 +40,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron core (75% of radius), silicate mantle",
     moons: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/512px-Mercury_in_true_color.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Mercury has no moons or rings",
       "Temperature ranges from -173°C to 427°C",
@@ -63,7 +63,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Similar to Earth - iron core, silicate mantle",
     moons: 0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Venus rotates backwards (retrograde rotation)",
       "Surface temperature is 462°C - hot enough to melt lead",
@@ -86,7 +86,7 @@ const solarSystemData = {
     discoveryYear: "N/A - Home planet",
     composition: "Iron-nickel core, silicate mantle, water oceans",
     moons: 1,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1280px-The_Earth_seen_from_Apollo_17.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "71% of Earth's surface is covered by water",
       "Earth has one natural satellite: the Moon",
@@ -109,7 +109,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron sulfide core, basaltic mantle, iron oxide surface",
     moons: 2,
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Mars has two small moons: Phobos and Deimos",
       "Olympus Mons is the largest volcano in the solar system (21 km high)",
@@ -132,7 +132,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium with a rocky core",
     moons: 95,
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Jupiter_by_Cassini-Huygens.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Jupiter has 95 known moons, including the four Galilean moons",
       "The Great Red Spot is a storm larger than Earth that has lasted 400+ years",
@@ -155,7 +155,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium, less dense than water",
     moons: 146,
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Saturn_cosmic_storm.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Saturn has 146 confirmed moons, including Titan with lakes of methane",
       "Its rings are made of ice and rock particles, some as small as dust",
@@ -178,7 +178,7 @@ const solarSystemData = {
     discoveryYear: "1781 by William Herschel",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 27,
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Uranus rotates on its side (98° axial tilt)",
       "It has 27 known moons named after Shakespeare characters",
@@ -201,7 +201,7 @@ const solarSystemData = {
     discoveryYear: "1846 by mathematical prediction",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 16,
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500&h=500&fit=crop&crop=center",
     facts: [
       "Wind speeds reach up to 2,100 km/h - faster than the speed of sound",
       "Neptune has 16 known moons, largest being Triton",
