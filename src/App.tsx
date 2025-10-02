@@ -84,49 +84,6 @@ function App() {
                 </div>
               </section>
 
-              {/* Developer Zone Section */}
-              <section id="section4" className="py-16 bg-cosmic-800/30" data-aos="fade-up">
-                <div className="container mx-auto px-4 text-center">
-                  <h2 className="text-4xl font-orbitron font-bold mb-12 bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent">
-                    Developer Zone
-                  </h2>
-                  <div className="max-w-6xl mx-auto">
-                    <p className="text-xl text-cosmic-300 leading-relaxed mb-8">
-                      Welcome to the Developer Zone! This is where coding challenges and programming adventures await.
-                      Sharpen your skills with our collection of developer-focused games and challenges.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                      <div className="game-card rounded-xl p-6">
-                        <h3 className="text-2xl font-bold text-purple-400 mb-4">💻 Coding Challenges</h3>
-                        <p className="text-cosmic-300">
-                          Test your programming knowledge with interactive coding challenges
-                          covering JavaScript, CSS, algorithms, and more.
-                        </p>
-                      </div>
-                      <div className="game-card rounded-xl p-6">
-                        <h3 className="text-2xl font-bold text-orange-400 mb-4">🚀 Skill Building</h3>
-                        <p className="text-cosmic-300">
-                          Build real-world development skills through gamified learning
-                          experiences that make complex concepts fun and memorable.
-                        </p>
-                      </div>
-                      <div className="game-card rounded-xl p-6">
-                        <h3 className="text-2xl font-bold text-green-400 mb-4">🎯 Progress Tracking</h3>
-                        <p className="text-cosmic-300">
-                          Track your learning journey and see how your developer skills
-                          improve as you conquer each challenge.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <button className="bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-                        Explore Developer Games
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
               {/* About Section */}
               <section id="about" className="py-16" data-aos="fade-up">
                 <div className="container mx-auto px-4 text-center max-w-4xl">
@@ -147,7 +104,7 @@ function App() {
                       </p>
                     </div>
                     <div className="game-card rounded-xl p-6">
-                      <h3 className="text-2xl font-bold text-orange-400 mb-4">💻 For Developers</h3>
+                      <h3 className="text-2xl font-bold text-orange-400 mb-4">� For Developers</h3>
                       <p className="text-cosmic-300">
                         Master CSS, JavaScript, algorithms, and more through interactive coding challenges 
                         that make learning programming concepts fun and memorable.
