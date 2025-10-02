@@ -110,22 +110,23 @@ const SlidingCosmos: React.FC = () => {
     <div className="min-h-screen bg-cosmic-900 p-4">
       <div className="container mx-auto max-w-4xl">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
           <button
             onClick={() => setCurrentGame(null)}
-            className="flex items-center space-x-2 text-cosmic-300 hover:text-purple-400 transition-colors"
+            className="flex items-center space-x-2 text-cosmic-300 hover:text-purple-400 transition-colors order-2 sm:order-1"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>Back to Games</span>
+            <span className="hidden sm:inline">Back to Games</span>
+            <span className="sm:hidden">Back</span>
           </button>
 
-          <h1 className="text-3xl font-orbitron font-bold text-center bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-orbitron font-bold text-center bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent order-1 sm:order-2">
             Sliding Cosmos
           </h1>
 
           <button
             onClick={initializeGame}
-            className="flex items-center space-x-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+            className="flex items-center space-x-2 px-3 sm:px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors order-3"
           >
             <RotateCcw className="w-4 h-4" />
             <span>Reset</span>
@@ -133,13 +134,13 @@ const SlidingCosmos: React.FC = () => {
         </div>
 
         {/* Game Stats */}
-        <div className="flex justify-center space-x-8 mb-6">
+        <div className="flex justify-center space-x-4 sm:space-x-8 mb-6">
           <div className="text-center">
-            <div className="text-2xl font-bold text-purple-400">{moves}</div>
+            <div className="text-xl sm:text-2xl font-bold text-purple-400">{moves}</div>
             <div className="text-sm text-cosmic-400">Moves</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-orange-400">
+            <div className="text-xl sm:text-2xl font-bold text-orange-400">
               {Math.floor((Date.now() - startTime) / 1000)}s
             </div>
             <div className="text-sm text-cosmic-400">Time</div>
@@ -147,12 +148,12 @@ const SlidingCosmos: React.FC = () => {
         </div>
 
         {/* Game Board and Goal State */}
-        <div className="flex justify-center items-start gap-8 mb-6">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-6 lg:gap-8 mb-6">
           {/* Current Puzzle */}
-          <div className="text-center">
+          <div className="text-center w-full lg:w-auto">
             <h3 className="text-lg font-semibold text-cosmic-300 mb-3">Current Puzzle</h3>
-            <div className="bg-cosmic-800 p-4 rounded-xl">
-              <div className="grid grid-cols-4 gap-2 w-80 h-80">
+            <div className="bg-cosmic-800 p-3 sm:p-4 rounded-xl mx-auto max-w-md">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-2 w-full aspect-square max-w-[320px] sm:max-w-[360px] mx-auto">
                 {tiles.map((tile, index) => (
                   <motion.div
                     key={tile.id}
@@ -161,7 +162,7 @@ const SlidingCosmos: React.FC = () => {
                     whileTap={tile.isEmpty ? {} : { scale: 0.95 }}
                     onClick={() => handleTileClick(index)}
                     className={`
-                      rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer
+                      rounded-lg flex items-center justify-center text-3xl sm:text-4xl font-bold cursor-pointer
                       transition-all duration-200
                       ${tile.isEmpty
                         ? 'bg-cosmic-700 cursor-default'
@@ -177,18 +178,18 @@ const SlidingCosmos: React.FC = () => {
           </div>
 
           {/* Goal State */}
-          <div className="text-center">
+          <div className="text-center w-full lg:w-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Target className="w-5 h-5 text-green-400" />
               <h3 className="text-lg font-semibold text-green-400">Goal</h3>
             </div>
-            <div className="bg-cosmic-800/50 p-4 rounded-xl border-2 border-green-400/30">
-              <div className="grid grid-cols-4 gap-2 w-60 h-60">
+            <div className="bg-cosmic-800/50 p-3 sm:p-4 rounded-xl border-2 border-green-400/30 mx-auto max-w-xs">
+              <div className="grid grid-cols-4 gap-1.5 sm:gap-2 w-full aspect-square max-w-[240px] sm:max-w-[260px] mx-auto">
                 {galaxyImages.map((symbol, index) => (
                   <div
                     key={index}
                     className={`
-                      rounded-lg flex items-center justify-center text-2xl font-bold
+                      rounded-lg flex items-center justify-center text-xl sm:text-2xl font-bold
                       ${index === 15
                         ? 'bg-cosmic-700/50 border-2 border-dashed border-cosmic-500'
                         : 'bg-gradient-to-br from-green-500/30 to-emerald-500/30 border border-green-400/20'
@@ -200,7 +201,7 @@ const SlidingCosmos: React.FC = () => {
                 ))}
               </div>
             </div>
-            <p className="text-xs text-cosmic-400 mt-2 max-w-60">
+            <p className="text-xs text-cosmic-400 mt-2 max-w-60 mx-auto">
               Arrange symbols in this order with the empty space at bottom-right
             </p>
           </div>
@@ -225,21 +226,21 @@ const SlidingCosmos: React.FC = () => {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
-                className="bg-cosmic-800 rounded-xl p-8 text-center max-w-md mx-4"
+                className="bg-cosmic-800 rounded-xl p-4 sm:p-8 text-center max-w-md mx-4"
               >
-                <div className="text-6xl mb-4">🌌</div>
-                <h2 className="text-3xl font-bold text-purple-400 mb-2">Cosmos Aligned!</h2>
-                <p className="text-cosmic-300 mb-4">
+                <div className="text-4xl sm:text-6xl mb-4">🌌</div>
+                <h2 className="text-xl sm:text-3xl font-bold text-purple-400 mb-2">Cosmos Aligned!</h2>
+                <p className="text-cosmic-300 mb-4 text-sm sm:text-base">
                   You've arranged the cosmic puzzle perfectly!
                 </p>
-                <div className="text-cosmic-300 mb-4">
+                <div className="text-cosmic-300 mb-4 text-sm sm:text-base">
                   <p>Moves: {moves}</p>
                   <p>Time: {Math.floor((Date.now() - startTime) / 1000)}s</p>
                 </div>
-                <p className="text-lg font-bold text-orange-400 mb-6">
+                <p className="text-base sm:text-lg font-bold text-orange-400 mb-4 sm:mb-6">
                   Score: {Math.max(0, 300 - Math.floor((Date.now() - startTime) / 1000)) + Math.max(0, 200 - moves) + 100}
                 </p>
-                <div className="flex space-x-4">
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                   <button
                     onClick={initializeGame}
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors"
