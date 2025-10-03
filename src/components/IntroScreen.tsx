@@ -17,7 +17,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "73% Hydrogen, 25% Helium, 2% heavier elements",
     moons: 0,
-    image: "/src/images/sun.jpg",
+    image: "/images/sun.jpg",
     facts: [
       "The Sun is 109 times wider than Earth",
       "It takes 8 minutes for sunlight to reach Earth",
@@ -40,7 +40,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron core (75% of radius), silicate mantle",
     moons: 0,
-    image: "/src/images/mercury.jpg",
+    image: "/images/mercury.jpg",
     facts: [
       "Mercury has no moons or rings",
       "Temperature ranges from -173°C to 427°C",
@@ -63,7 +63,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Similar to Earth - iron core, silicate mantle",
     moons: 0,
-    image: "/src/images/venus.jpg",
+    image: "/images/venus.jpg",
     facts: [
       "Venus rotates backwards (retrograde rotation)",
       "Surface temperature is 462°C - hot enough to melt lead",
@@ -86,7 +86,7 @@ const solarSystemData = {
     discoveryYear: "N/A - Home planet",
     composition: "Iron-nickel core, silicate mantle, water oceans",
     moons: 1,
-    image: "/src/images/earth.jpg",
+    image: "/images/earth.jpg",
     facts: [
       "71% of Earth's surface is covered by water",
       "Earth has one natural satellite: the Moon",
