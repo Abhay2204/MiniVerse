@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
             className="flex items-center space-x-8 text-cosmic-400"
           >
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">30+</div>
+              <div className="text-2xl font-bold text-purple-400">20+</div>
               <div className="text-sm">Games</div>
             </div>
             <div className="text-center">
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-400">✨</div>
-              <div className="text-sm">Magic</div>
+              <div className="text-sm">Space Adventure</div>
             </div>
           </motion.div>
         </motion.div>
