@@ -109,7 +109,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Iron sulfide core, basaltic mantle, iron oxide surface",
     moons: 2,
-    image: "/src/images/mars.jpg",
+    image: "/images/mars.jpg",
     facts: [
       "Mars has two small moons: Phobos and Deimos",
       "Olympus Mons is the largest volcano in the solar system (21 km high)",
@@ -132,7 +132,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium with a rocky core",
     moons: 95,
-    image: "/src/images/jupiter.jpg",
+    image: "/images/jupiter.jpg",
     facts: [
       "Jupiter has 95 known moons, including the four Galilean moons",
       "The Great Red Spot is a storm larger than Earth that has lasted 400+ years",
@@ -155,7 +155,7 @@ const solarSystemData = {
     discoveryYear: "Ancient times",
     composition: "Mostly hydrogen and helium, less dense than water",
     moons: 146,
-    image: "/src/images/saturn.jpg",
+    image: "/images/saturn.jpg",
     facts: [
       "Saturn has 146 confirmed moons, including Titan with lakes of methane",
       "Its rings are made of ice and rock particles, some as small as dust",
@@ -178,7 +178,7 @@ const solarSystemData = {
     discoveryYear: "1781 by William Herschel",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 27,
-    image: "/src/images/uranus.jpg",
+    image: "/images/uranus.jpg",
     facts: [
       "Uranus rotates on its side (98° axial tilt)",
       "It has 27 known moons named after Shakespeare characters",
@@ -201,7 +201,7 @@ const solarSystemData = {
     discoveryYear: "1846 by mathematical prediction",
     composition: "Water, methane, and ammonia ices with a rocky core",
     moons: 16,
-    image: "/src/images/neptune.jpg",
+    image: "/images/neptune.jpg",
     facts: [
       "Wind speeds reach up to 2,100 km/h - faster than the speed of sound",
       "Neptune has 16 known moons, largest being Triton",
@@ -221,7 +221,7 @@ const historicComets = [
     nextVisible: "2061",
     description: "The most famous comet, visible to the naked eye every 75-76 years",
     color: "#87CEEB",
-    image: "/src/images/comets.jpg",
+    image: "/images/comets.jpg",
     facts: [
       "Named after astronomer Edmond Halley",
       "Mentioned in Chinese records from 240 BCE",
@@ -236,7 +236,7 @@ const historicComets = [
     nextVisible: "4530",
     description: "One of the brightest comets of the 20th century",
     color: "#FFD700",
-    image: "/src/images/comets.jpg",
+    image: "/images/comets.jpg",
     facts: [
       "Visible to naked eye for 18 months",
       "Nucleus is 30-40 km in diameter",
@@ -251,7 +251,7 @@ const historicComets = [
     nextVisible: "68,000 CE",
     description: "Known for its extremely long tail",
     color: "#98FB98",
-    image: "/src/images/comets.jpg",
+    image: "/images/comets.jpg",
     facts: [
       "Tail stretched over 100 degrees across the sky",
       "Discovered by amateur astronomer Yuji Hyakutake",
